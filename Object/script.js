@@ -198,3 +198,27 @@ const family = {
 };
 const twoAge = family.father.age + family.father.mother.age;
 console.log(twoAge);
+
+const computer = {
+  brand: "lenovo",
+  price: 3500,
+  procecor: "intel",
+  ssd: "512GB",
+};
+// const keys = Object.keys(computer);
+// const values = Object.values(computer);
+const computerKey = Object.keys(computer);
+const hasBrand = computerKey.includes("brand");
+console.log(hasBrand);
+
+if ("brand" in computer) {
+  console.log("Brand Exists");
+} else {
+  console.log("No Brand");
+}
+
+const updatePerson = {
+  name: "Alice",
+  age: 25,
+  co
+};
