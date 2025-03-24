@@ -68,3 +68,115 @@ function gojToMiter(goj) {
 }
 const miters = gojToMiter(10);
 console.log(miters);
+
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const isLeapYear1 = isLeapYear(2043);
+console.log(isLeapYear1);
+
+function isLeapYear(year) {
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 400 !== 0 && year % 100 === 0) {
+    return false;
+  }
+}
+
+function isLeapYear(year) {
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
+    return false;
+  } else if (year % 4 === 0) {
+    return true;
+  } else {
+    return true;
+  }
+}
+const isLeapYear2 = isLeapYear(2100);
+console.log(isLeapYear2);
+
+// Pracice
+function incomeAmount(amount) {
+  if (amount < 50000) {
+    return 10;
+  } else if (amount > 50000 && amount <= 100000) {
+    return 20;
+  } else if (amount > 100000 && amount <= 200000) {
+    return 30;
+  } else if (amount > 200000) {
+    return 40;
+  } else {
+    return " Give me right valu";
+  }
+}
+const incomeAmounts = incomeAmount(500000);
+console.log(incomeAmounts);
+
+function deliveryInfo(kg) {
+  if (kg < 10) {
+    return 100;
+  } else if (kg < 20) {
+    return 300;
+  } else if (kg <= 50) {
+    return 1000;
+  } else if (kg > 50) {
+    return kg * 100;
+  }
+}
+const productKg = deliveryInfo(51);
+console.log(productKg);
+
+function marksInput(marks) {
+  if (marks >= 80) {
+    return "A";
+  } else if (marks >= 70 || marks >= 79) {
+    return "B";
+  } else if (marks >= 60 || marks >= 69) {
+    return "C";
+  } else if (marks >= 50 || marks >= 59) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+const marks = marksInput(2);
+console.log(marks);
+
+function oddAverage(numbers) {
+  const odds = [];
+  for (const number of numbers) {
+    if (number % 2 === 1) {
+      odds.push(number);
+    }
+  }
+
+  if (odds.length === 0) return null; // To avoid division by zero
+
+  const sum = odds.reduce((acc, num) => acc + num, 0);
+  return sum / odds.length;
+}
+
+const nums = [12, 13, 65, 11, 24, 31];
+const oddNumberAvg = oddAverage(nums);
+console.log(oddNumberAvg);
+
+function oddAverage(numbers) {
+  const odds = [];
+  for (const number of numbers) {
+    if (number % 2 === 1) {
+      odds.push(number);
+    }
+  }
+  let sum = 0;
+  for (const number of odds) {
+    sum += number;
+  }
+}
+console.log(sum);
